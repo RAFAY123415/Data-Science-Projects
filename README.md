@@ -8,12 +8,12 @@
 
 #####  • I fallow all the step to understand our dataset like (No of Rows and Columns , Skewness , Datatypes of Columns ) .
 
-#####  • In data preparation i extract important features from the dataset as most of the features are not in the standard format so i applied (Feature Engeering ,Data Preprocessing ) Technique to make our data in standard format.
+#####  • In data preparation i extract important features from the dataset as most of the features are not in the standard format so i applied (Feature Engeering ,Data Preprocessing ) Technique to make our data in standard format .
 
 #####  • After Data Preparation i apply all the Regression assumption techniques to test our data .
 
-#####  • As most of the features do not cause overfitting so i did not use ridge and lasso regression i simply use regression for our problem .
+#####  • As most of the features do not cause overfitting so i did not use ridge and lasso regression i simply use regression for our problem before applying the regression i normalize the data by using standard scaler .
 
-#####  • At last i predict the minimum and maximum price in range .
+#####  • At the last step i predict the minimum and maximum price in range .
 
 
