@@ -1,7 +1,7 @@
 import openai
 import streamlit as st
 
-openai.api_key ='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'
+openai.api_key ='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'
 
 st.header("Restaurant Review Replier")
 review  = st.text_area("Enter Customer Review")
