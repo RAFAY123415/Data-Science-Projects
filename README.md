@@ -16,4 +16,6 @@ Judge Toxic Comments Prediction System
 
 Resturant Review Replier Using Chat Gpt -3
 
+Intent Classification of Travel Airline
+
 Movies Recommendation System
