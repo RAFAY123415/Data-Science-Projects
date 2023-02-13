@@ -19,3 +19,7 @@ Resturant Review Replier Using Chat Gpt -3
 Intent Classification of Travel Airline
 
 Movies Recommendation System
+
+Sentiment Analysis and Reporting on Arabic Dataset
+
+Synthetic Pharaphrase Data Generation Using Chat Gpt-3
