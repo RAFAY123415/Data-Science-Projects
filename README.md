@@ -23,3 +23,7 @@ Movies Recommendation System
 Sentiment Analysis and Reporting on Arabic Dataset
 
 Synthetic Pharaphrase Data Generation Using Chat Gpt-3
+
+New York Taxi Fare Prediction System
+
+Financial Data Generation Using Chat gpt-3
