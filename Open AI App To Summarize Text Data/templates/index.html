@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Artemis</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+  <link rel="icon" href="{{ url_for('static', filename='favicon.ico') }}" type="image/x-icon">
+
+</head>
+<body>
+  <div class="container">
+    <div class="header">
+      <img src="{{ url_for('static', filename='logo.png') }}" alt="Artemis Logo">
+      <h1>Artemis</h1>
+    </div>
+    
+    <div class="form">
+      <form method="POST" action="/submit" enctype="multipart/form-data">
+        <input type="file" name="code_zip" multiple>
+        <button type="submit">Analyze Code</button>
+      </form>
+    </div>
+    
+    <div id="response"></div>
+  </div>
+  
+  <script>
+    const responseDiv = document.getElementById('response');
+    const form = document.querySelector('form');
+
+    form.addEventListener('submit', (e) => {
+      e.preventDefault(); // Prevent form submission manually
+
+      const formData = new FormData(form);
+
+      fetch('/submit', {
+        method: 'POST',
+        body: formData
+      })
+        .then((res) => res.text())
+        .then((text) => {
+          responseDiv.innerText = text; // Put the response inside Display the API response
+        })
+        .catch((error) => {
+          console.log('Error:', error);
+          responseDiv.innerText = 'Error: An unexpected error occurred';
+        });
+    });
+  </script>
+</body>
+</html>
