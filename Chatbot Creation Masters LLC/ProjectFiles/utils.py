@@ -6,7 +6,7 @@ from langchain.embeddings.openai import OpenAIEmbeddings
 from pinecone import Pinecone
 
 
-def initialize_pinecone(api_key="3fad6b9d-0f75-4786-b122-62e63f824585", environment="us-west-2", index_name="testing1234"):
+def initialize_pinecone(api_key="", environment="", index_name=""):
   pc = Pinecone(api_key=api_key, environment=environment)
   index = pc.Index(index_name)
   return index
@@ -14,7 +14,7 @@ def initialize_pinecone(api_key="3fad6b9d-0f75-4786-b122-62e63f824585", environm
 # get openai api key from platform.openai.com
 
 def get_openai_transformer_embeddings(model_name="text-embedding-3-large"):
-  OPENAI_API_KEY = os.getenv('OPENAI_API_KEY') or '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'
+  OPENAI_API_KEY = os.getenv('OPENAI_API_KEY') or ''
   return OpenAIEmbeddings(model=model_name,openai_api_key=OPENAI_API_KEY)
 
 
@@ -31,7 +31,7 @@ def find_match(embeddings_model,index,query, k=2, score=False):
 def return_answer (context,query):
   client = OpenAI(
     # defaults to os.environ.get("OPENAI_API_KEY")
-    api_key='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')
+    api_key='')
   # Make a request using the OpenAI API
   response = client.chat.completions.create(
     model="gpt-4",
@@ -54,7 +54,7 @@ def return_answer (context,query):
 def query_refiner(conversation, query):
     client = OpenAI(
     # defaults to os.environ.get("OPENAI_API_KEY")
-    api_key='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')
+    api_key='')
     response = client.completions.create(
     model="gpt-3.5-turbo-instruct",
     prompt=f"Given the following user query and conversation log, formulate a question that would be the most relevant to provide the user with an answer from a knowledge base.\n\nCONVERSATION LOG: \n{conversation}\n\nQuery: {query}\n\nRefined Query:",
