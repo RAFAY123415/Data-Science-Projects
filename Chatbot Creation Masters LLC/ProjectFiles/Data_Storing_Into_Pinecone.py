@@ -22,7 +22,7 @@ def Split_Docs_IntoChunks(pdf_text,chunk_size=1000,chunk_overlap=20):
   return chunks
 
 def get_openai_transformer_embeddings(model_name="text-embedding-3-large"):
-    OPENAI_API_KEY = os.getenv('OPENAI_API_KEY') or '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'
+    OPENAI_API_KEY = os.getenv('OPENAI_API_KEY') or ''
     return OpenAIEmbeddings(model=model_name,openai_api_key=OPENAI_API_KEY)
 
 def extract_chunks_and_pdf_names(list_of_chunks,pdf_name):
@@ -56,7 +56,7 @@ def create_vectors_from_dataframe(df):
         vectors.append(vector)
     return vectors
 
-def initialize_pinecone(api_key="3fad6b9d-0f75-4786-b122-62e63f824585", environment="us-west-2", index_name="testing1234"):
+def initialize_pinecone(api_key="", environment="", index_name=""):
   pc = Pinecone(api_key=api_key, environment=environment)
   index = pc.Index(index_name)
   return index
