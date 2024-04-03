@@ -28,8 +28,8 @@ def main():
         df2['chunk_id']=df2['id']+df2['Source']
         st.dataframe(df2)
         vectors = create_vectors_from_dataframe(df2)
-        index = initialize_pinecone(api_key="3fad6b9d-0f75-4786-b122-62e63f824585", environment="us-west-2",
-                                        index_name="testing1234")
+        index = initialize_pinecone(api_key="", environment="",
+                                        index_name="")
         upsert_vectors_in_batches(index, vectors, vector_length=1000, batch_size=30, namespace="ns1")
         st.write('done')
         empty_df = pd.DataFrame(columns=['values', 'metadata'])
