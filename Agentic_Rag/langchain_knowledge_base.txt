@@ -1,0 +1,32 @@
+🔷 What is LangChain?
+
+LangChain is a powerful open-source framework designed to simplify the development of LLM-powered applications. Instead of handling embeddings, vector stores, prompt templates, memory, retrieval, and API connections manually, LangChain provides a unified toolkit that connects all these components into modular building blocks. Developers can easily integrate different LLMs, vector databases, and tools to create Retrieval-Augmented Generation (RAG) systems, chatbots, pipelines, and autonomous workflows. LangChain became popular because it abstracts away a lot of complexity—turning LLM development into a clean, production-ready, plug-and-play ecosystem.
+However, as applications grow more complex—especially those involving multi-step reasoning, state management, or agentic behaviour—developers need more control over how information flows, how state changes, and how tasks are orchestrated. This need for fine-grained control and reliability is exactly what led to the rise of LangGraph.
+
+🔷 What is LangGraph?
+
+LangGraph builds on LangChain, but introduces a more advanced framework for creating stateful, multi-agent, and deterministic LLM systems. While LangChain focuses on “components,” LangGraph focuses on orchestration. It allows you to define complex AI workflows as graphs—where each node represents a function, agent, or LLM call, and edges define how information flows between them. This makes it extremely powerful for building Agentic RAG, tool-using agents, planners, supervisors, retrievers, evaluators, and any system requiring controlled reasoning loops.
+One of LangGraph’s key strengths is its ability to manage state over long-running workflows. In traditional RAG pipelines, state is handled implicitly. In LangGraph, state is explicit, versioned, recoverable, and traceable. You can pause/resume workflows, handle retries, audit every decision, and ensure the model behaves consistently—even in multi-agent systems. This makes LangGraph ideal for enterprise applications where reliability, explainability, and repeatability are critical.
+
+🔷 LangChain vs. LangGraph (In Simple Terms)
+LangChain = Components (embeddings, retrievers, vector stores, LLMs, prompts, tools)
+LangGraph = Orchestration (how components interact, reason, and take actions)
+LangChain = Good for simple RAG, chatbots, quick prototypes
+LangGraph = Best for agentic systems, multi-step workflows, cross-tool pipelines
+LangChain = Utilities
+LangGraph = Brain + nervous system
+Think of LangChain as the building blocks, and LangGraph as the architecture that organizes and controls them.
+
+🔷 Why These Matter for Agentic RAG
+In Agentic RAG—where you have Planner Agents, Execution Agents, Retriever Agents, and Verification Agents—orchestration is more important than just simple retrieval. LangGraph allows you to define:
+
+multi-agent collaboration
+loops (plan → act → verify → repeat)
+branching logic
+conditional reasoning
+retries, fallbacks, timeouts
+tool calls
+long-term state management
+
+This is why LangGraph is quickly becoming the standard for building next-generation AI systems.
+
